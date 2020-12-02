@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippet_testimonial" name="Testimonial Snippet">
+        <section class="snippet_testimonial">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/web/image/theme_tutorial.client/32x32" alt="client" class="img-circle"/><!--Here the src is refering to the image controller inside web > aceontrollers > main > content_image(), we are sending it the xmlid and the height and width-->
+                        <h3>Client Name</h3>
+                        <p>lorem ipsu, final</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/web/image/theme_tutorial.client/32x32" alt="client" class="img-circle"/>
+                        <h3>Client Name</h3>
+                        <p>lorem ipsu, final</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/web/image/theme_tutorial.client/32x32" alt="client" class="img-circle"/>
+                        <h3>Client Name</h3>
+                        <p>lorem ipsu, final</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="place_into_bar" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_tutorial.snippet_testimonial" t-thumbnail="/theme_tutorial/static/img/client.jpg"/>
+        </xpath>
+    </template>
+</odoo>
